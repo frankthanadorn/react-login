@@ -28,8 +28,10 @@ const Login = details => {
   }
 }
 
-const Logout = ()=>{
-  console.log("Logout");
+const Logout = ()=>{setUser({
+  name: "",
+  email: ""
+});
 }
 
   return (
@@ -37,7 +39,7 @@ const Logout = ()=>{
       {(user.email !="") ?(
         <div className ="Welcome">
           <h2>Welcome,<span>{user.name}</span></h2>
-          <button>Logout</button>
+          <button onClick={Logout}>Logout</button>
           
           </div>
       ) :(
