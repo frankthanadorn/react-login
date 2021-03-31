@@ -16,7 +16,7 @@ function LoginForm({Login,error}) {
                 {/*errpr*/}
                 <div className="form-group">
                     <label htmlFor="name">Name:</label>
-                    <input type="text" name="name" id ="name"/>
+                    <input type="text" name="name" id ="name" onChange={e =>setDetails({...details, name: e.target.value})} value={details.name}/>
                 </div>
                 <div className="form-group">
                     <label htmlFor="email">Email:</label>
