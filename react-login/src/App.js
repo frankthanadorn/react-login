@@ -23,6 +23,7 @@ const Login = details => {
   });
 } else {
   console.log("details not match");
+  setError("details not match");
 
 
   }
