@@ -1,8 +1,16 @@
-import React from 'react';
+import React,{useState} from 'react';
 
-function LoginForm() {
+function LoginForm({Login,error}) {
+    const [details,setDetails] = useState({name:"",email:"",password:""});
+    
+
+    const submitHandler = e =>{
+        e.preventDefault();
+        Login(details);
+    }
     return (
-        <form>
+        <form onSubmit={submitHandler}>
+        
             <div className="form-inner">
                 <h2>Login</h2>
                 {/*errpr*/}
@@ -18,6 +26,7 @@ function LoginForm() {
                     <label htmlFor="password">Password:</label>
                     <input type="password" name="password" id ="password"/>
                 </div>
+                <input type="submit" value="LOGIN"/>
 
 
             </div>
