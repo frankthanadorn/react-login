@@ -17,6 +17,10 @@ const Login = details => {
 
   if(details.email == adminUser.email && details.password ==adminUser.password  )
   {console.log("Logged in");
+  setUser({
+    name: details.name,
+    email: details.email
+  });
 } else {
   console.log("details not match");
 
